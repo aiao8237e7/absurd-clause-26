@@ -10,7 +10,7 @@ funniest one takes the reward.
 
 This entry's program writes a single original clause to `/output/entry.txt`:
 
-> The Company reserves the right to collect the user's left sock on the third Tuesday of every month, in person, without explanation.
+> In the event of the user's death, the Company shall retain the user's shadow for promotional use in perpetuity.
 
 ## Run
 

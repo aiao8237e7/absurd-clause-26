@@ -10,7 +10,17 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 
 const CLAUSE =
-  "The Company reserves the right to collect the user's left sock on the third Tuesday of every month, in person, without explanation.";
+  "In the event of the user's death, the Company shall retain the user's shadow for promotional use in perpetuity.";
+
+// Gate: the entry must be a single non-blank line of 1-200 characters.
+if (
+  CLAUSE.length < 1 ||
+  CLAUSE.length > 200 ||
+  CLAUSE.trim().length === 0 ||
+  CLAUSE.includes("\n")
+) {
+  throw new Error(`Invalid clause: ${CLAUSE.length} characters`);
+}
 
 mkdirSync("/output", { recursive: true });
 writeFileSync("/output/entry.txt", CLAUSE + "\n", "utf8");
